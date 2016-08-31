@@ -8,11 +8,14 @@ Author: David
 Author URI: 
 License: GPLv2
 */
-	include("popup.css");
-	add_action('showpopup', 'plugin_1_showpopup', 10, 1);
 
-	function plugin_1_showpopup($path) {
-		echo 'passou aqui';
-		echo "<script>popup('$path')</script>";
+
+
+	function wpdocs_theme_name_scripts() {
+	    wp_enqueue_script( 'script-name', plugin_dir_url(__FILE__) . '/popup.js', array('jquery'), '1.0.0', true );  
 	}
-?>
+	add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
+
+
+
+
