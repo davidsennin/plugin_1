@@ -5,6 +5,6 @@
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) )
   die();
  
-remove_action('showpopup');
+//remove_action('showpopup');
  
 ?>
